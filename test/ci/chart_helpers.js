@@ -246,6 +246,50 @@ const DATETIME_V3 = {
   },
 };
 
+const HORIZONTAL_BAR = {
+  type: 'horizontalBar',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{ label: 'Test', data: [10, 20, 30] }],
+  },
+};
+
+const HORIZONTAL_BAR_V3 = {
+  type: 'horizontalBar',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{ label: 'Test', data: [10, 20, 30] }],
+  },
+  options: {
+    scales: {
+      x: { beginAtZero: true },
+    },
+  },
+};
+
+const GAUGE = {
+  type: 'gauge',
+  data: {
+    datasets: [{ data: [50], backgroundColor: ['green'] }],
+  },
+};
+
+const SANKEY = {
+  type: 'sankey',
+  data: {
+    datasets: [
+      {
+        data: [
+          { from: 'a', to: 'b', flow: 10 },
+          { from: 'a', to: 'c', flow: 5 },
+        ],
+        colorFrom: 'red',
+        colorTo: 'blue',
+      },
+    ],
+  },
+};
+
 module.exports = {
   BASIC_CHART,
   BASIC_CHART_V3,
@@ -255,4 +299,8 @@ module.exports = {
   CHART_VIOLIN,
   CHART_PROGRESSBAR,
   DATETIME_V3,
+  HORIZONTAL_BAR,
+  HORIZONTAL_BAR_V3,
+  GAUGE,
+  SANKEY,
 };

@@ -152,6 +152,60 @@ describe('charts.js', () => {
     assert.equal(100, dimensions.height);
   });
 
+  it('renders a horizontalBar chart in v2', async () => {
+    const buf = await chartsLib.renderChartJs(
+      400,
+      200,
+      'white',
+      1.0,
+      '2.9.4',
+      'png',
+      charts.HORIZONTAL_BAR,
+    );
+    assert(buf.length > 0);
+  });
+
+  it('renders a horizontalBar chart in v3 (converted to bar)', async () => {
+    const buf = await chartsLib.renderChartJs(
+      400,
+      200,
+      'white',
+      1.0,
+      '3',
+      'png',
+      charts.HORIZONTAL_BAR_V3,
+    );
+    assert(buf.length > 0);
+  });
+
+  it('renders a horizontalBar chart in v4 (converted to bar)', async () => {
+    const buf = await chartsLib.renderChartJs(
+      400,
+      200,
+      'white',
+      1.0,
+      '4',
+      'png',
+      charts.HORIZONTAL_BAR_V3,
+    );
+    assert(buf.length > 0);
+  });
+
+  it('renders a gauge chart (alias for radialGauge)', async () => {
+    const buf = await chartsLib.renderChartJs(200, 200, 'white', 1.0, '2.9.4', 'png', charts.GAUGE);
+    assert(buf.length > 0);
+  });
+
+  it('renders a sankey chart in v3', async () => {
+    const buf = await chartsLib.renderChartJs(400, 200, 'white', 1.0, '3', 'png', charts.SANKEY);
+    assert(buf.length > 0);
+  });
+
+  it('renders a sankey chart in v4', async () => {
+    const buf = await chartsLib.renderChartJs(400, 200, 'white', 1.0, '4', 'png', charts.SANKEY);
+    assert(buf.length > 0);
+  });
+
   it('renders a basic chart svg', async () => {
     const buf = await chartsLib.renderChartJs(
       500,
