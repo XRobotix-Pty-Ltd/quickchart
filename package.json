@@ -30,6 +30,7 @@
     "chartjs-adapter-moment": "https://github.com/typpo/chartjs-adapter-moment.git#e9bc92ab6e0e500c91c4a9871db7b14d15b5c2e7",
     "chartjs-chart-box-and-violin-plot": "^2.4.0",
     "chartjs-chart-radial-gauge": "^1.0.3",
+    "chartjs-chart-sankey": "^0.12.1",
     "chartjs-node-canvas": "^3.0.6",
     "chartjs-plugin-annotation": "^0.5.7",
     "chartjs-plugin-colorschemes": "https://github.com/typpo/chartjs-plugin-colorschemes.git#979ef8e599265f65c85d5dae90b543d5589c734a",
